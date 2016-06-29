@@ -59,7 +59,7 @@ indx
 // We can use an underscore if you don't need access to the loop constant:
 for _ in 1...10
 {
-	println("do something")
+	print("do something")
 }
 
 // We can iterate over arrays
@@ -71,14 +71,21 @@ for name in names
 
 // We can iterate over a Dictionary's key/value pairs
 let numberOfLegs = ["Spider":8, "Ant":6, "Cat":4]
+var keys2 = [] as [String]
 for (animalName, legs) in numberOfLegs
 {
 	animalName
 	legs
+    keys2.append(animalName)
 }
 
+keys2
+
+var keys = numberOfLegs.map {(k,v) in return k}
+keys
+
 // We can iterate over characters in a String
-for character in "Hello"
+for character in "Hello".characters
 {
 	character
 }
@@ -129,7 +136,7 @@ do
 //
 // The if statement is very similar to C-like languages, except that the parenthesis are optional.
 // You can also chain multiple conditions with 'else' and 'else if' statements:
-if (index > 0)
+if index > 0
 {
 	"Index is positive"
 }

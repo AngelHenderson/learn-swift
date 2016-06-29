@@ -77,6 +77,20 @@ enum Barcode
 	case QRCode(String)      // QRCode with associated value type of String
 }
 
+enum OurOptional<T>{
+    case None
+    case Some(T)
+}
+
+var myOpt = OurOptional.Some(47)
+myOpt = .None
+
+
+//Exactly Equivalent
+var myString: String?
+myString = Optional.None
+var myOtherString:Optional<String>
+
 // Let's specify a UPCA code (letting the compiler infer the enum type of Barcode):
 var productBarcode = Barcode.UPCA(0, 8590951226, 3)
 
