@@ -45,7 +45,7 @@ class Counter
 	// No parameters
 	func increment()
 	{
-		count++
+		count += 1
 	}
 	
 	// One parameter, no external parameter name needed by caller
