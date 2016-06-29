@@ -23,6 +23,8 @@
 // Our structure must have all of its properties initialized, either with default values or through
 // initialization (described later.) For now, we'll just ensure they're all initialized with
 // default values.
+
+//STRUCT IS A PASS BY VALUE TYPE
 struct Resolution
 {
 	var width = 1280
@@ -34,6 +36,8 @@ struct Resolution
 //
 // Also, note that the final member, the 'name' property, does not need to be initialized because
 // optionals are initalized to nil by default.
+
+//CLASS IS A PASS BY REFERENCE TYPE
 class VideoMode
 {
 	var resolution = Resolution()

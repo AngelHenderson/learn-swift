@@ -87,9 +87,10 @@ myOpt = .None
 
 
 //Exactly Equivalent
-var myString: String?
+var myString: String? = "a String"
 myString = Optional.None
 var myOtherString:Optional<String>
+myString?.characters
 
 // Let's specify a UPCA code (letting the compiler infer the enum type of Barcode):
 var productBarcode = Barcode.UPCA(0, 8590951226, 3)
@@ -155,6 +156,14 @@ enum FamilyPet: String
 	case Dog = "Dog"
 	case Ferret = "Ferret"
 }
+
+
+enum LuckyNumbers: Int {
+    case TwentySeven = 27
+    case ThirtyTwo = 32
+}
+
+LuckyNumbers.TwentySeven.rawValue
 
 // And we can get their raw value as well:
 FamilyPet.Ferret.rawValue
