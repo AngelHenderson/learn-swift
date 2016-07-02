@@ -102,15 +102,21 @@ for (var index = 0; index < 3; ++index)
 // The parenthesis are optional for the For-Condition-Increment loop:
 for var index = 0; index < 3; ++index
 {
+    index
+}
+
+for index in 0 ..< 3
+{
 	index
 }
 
 // Variables are scoped to the For-Condition-Increment construct. To alter this, pre-declare index
 var index = 3000
-for index = 0; index < 3; ++index
+for index = 0; index < 3; index += 1
 {
 	index
 }
+
 index // Index holds 3 after running through the loop
 
 // ------------------------------------------------------------------------------------------------
@@ -120,16 +126,17 @@ index // Index holds 3 after running through the loop
 // through the loop:
 while index > 0
 {
-	--index
+	index -= 1
 }
 
 // Do-While loops also resemble their C-like language counterparts. They perform the condition
 // after each iteration through the loop. As a result, they always execute the code inside the
 // loop at least once:
-do
+repeat
 {
-	++index
+	index += 1
 } while (index < 3)
+
 
 // ------------------------------------------------------------------------------------------------
 // Conditional Statements
@@ -148,6 +155,7 @@ else
 {
 	"index is negative"
 }
+
 
 // Switch statements are more powerful than their C-like counterparts. Here are a few of those
 // differences to get us started:
